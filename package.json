@@ -1,0 +1,74 @@
+{
+  "name": "lx-ide",
+  "productName": "LX-IDE",
+  "version": "1.0.0",
+  "description": "Offline LaTeX Studio",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "scripts": {
+    "server": "node server/index.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"node server/index.js\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "electron .",
+    "dist": "npm run build && electron-builder --win portable"
+  },
+  "keywords": [
+    "latex",
+    "editor",
+    "tectonic",
+    "offline"
+  ],
+  "author": "Antigravity",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^8.0.0",
+    "cors": "^2.8.6",
+    "diff": "^9.0.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "multer": "^2.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.lxide.studio",
+    "productName": "LX-IDE",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "electron/**/*",
+      "server/**/*",
+      "client/dist/**/*",
+      "bin/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "bin/**/*",
+      "server/**/*",
+      "client/dist/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "portable": {
+      "artifactName": "LX-IDE.exe"
+    }
+  }
+}

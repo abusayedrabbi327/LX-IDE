@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment & Credentials
+.env
+.env.local
+.env.*.local
+
+# Build Outputs & Executables (exceeds GitHub 100MB file limit)
+release/
+client/dist/
+
+# Scratch & Temporary files
+scratch/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# User local workspace & personal manuscripts (keep private drafts local)
+.lxide/
+.DS_Store
+Thumbs.db
+projects/*
+!projects/PrismForge_Demo/
+projects/*/output/
+projects/*/.prismforge/
