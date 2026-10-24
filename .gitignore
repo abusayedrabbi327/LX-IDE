@@ -18,11 +18,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# User local workspace & personal manuscripts (keep private drafts local)
-.lxide/
-.DS_Store
-Thumbs.db
+# User personal manuscripts & private projects (kept strictly local)
 projects/*
 !projects/PrismForge_Demo/
 projects/*/output/
 projects/*/.prismforge/
+
+# User local workspace & configs
+.lxide/
+.DS_Store
+Thumbs.db
+
+# Personal notes & proposals
+propal of this.txt
