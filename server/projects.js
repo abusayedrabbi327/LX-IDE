@@ -31,11 +31,10 @@ const TEMPLATES = {
 \\usepackage{hyperref}
 \\usepackage{booktabs}
 
-\\title{PrismForge: High-Precision Local Scientific Writing and AI-Assisted Manuscript Synthesis}
-\\author{Dr. Alex Vance \\and Elena Rostova\\\\
+\\title{LX-IDE: High-Precision Local Scientific Writing and Privacy-First Manuscript Synthesis}
+\\author{Abu Sayed Rabbi\\\\
 \\small Department of Computer Science and Engineering\\\\
-\\small Institute for Advanced Research\\\\
-\\small \\texttt{\\{avance, erostova\\}@institute.edu}}
+\\small \\texttt{abusayedrabbi327@gmail.com}}
 \\date{\\today}
 
 \\begin{document}
